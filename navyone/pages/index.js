@@ -1,12 +1,11 @@
 // pages/index.js
 
 import React from "react";
+import Home from "@/components/Home";
 
 function HomePage() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <Home/>
   );
 }
 

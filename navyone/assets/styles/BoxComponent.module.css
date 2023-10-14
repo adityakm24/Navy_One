@@ -1,0 +1,37 @@
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
+  width: 400px; 
+  text-align: left; 
+}
+
+.heading-bar {
+  background-color: #3b3b3baa; 
+  padding: 10px;
+  border-radius: 10px 10px 0 0; /* Top-left and top-right corners rounded */
+}
+
+.heading-text {
+  font-size: 20px;
+  font-weight: 640; 
+  margin: 0; 
+  color: rgb(0, 0, 0); 
+}
+
+.content-box {
+    padding: 20px;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px;
+}
+
+.box ul {
+  list-style-type: circle; 
+  padding: 0;
+}
+
+.box li {
+  margin-bottom: 5px;
+  text-align: left; 
+}
