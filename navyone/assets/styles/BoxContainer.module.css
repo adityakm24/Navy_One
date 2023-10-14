@@ -2,17 +2,3 @@
   display: flex; 
 }
 
-/* In your CSS or styled-components */
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.custom-carousel {
-  max-width: 100%; /* Set your desired width */
-  height: auto; /* Ensure the aspect ratio of the images is maintained */
-  max-height: 250px; /* Set your desired height */
-}
-

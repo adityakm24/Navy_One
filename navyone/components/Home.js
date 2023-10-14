@@ -21,18 +21,16 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className="carousel-container">
+      <div>
         <Carousel
           autoPlay
           infiniteLoop
           interval={3000}
-          className="custom-carousel"
-          showStatus={true}
           showIndicators={true}
           centerMode={true}
           centerSlidePercentage={100}
-          width={350} // Set your desired width
-          height={250} // Set your desired height
+          width={450} // Set your desired width
+          height={150} // Set your desired height
         >
           {images.map((image, index) => (
             <div key={index}>
