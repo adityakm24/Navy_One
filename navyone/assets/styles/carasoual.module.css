@@ -65,7 +65,18 @@
   cursor: pointer;
 }
 
-/* active indicator (current slide) */
 .activeIndicator {
   background-color: #ffffff;
+}
+
+.header {
+  background-color: #bbafe3;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 640;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
 }

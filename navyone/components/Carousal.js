@@ -29,23 +29,25 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.carousel}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`${styles.slide} ${
-              currentSlide === index ? styles.active : ""
-            }`}
-          >
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className={styles.slideImage}
-            />
-          </div>
-        ))}
-        {/* 
+    <div>
+      <h1 className={styles.header}>Activities</h1>
+      <div className={styles.carouselContainer}>
+        <div className={styles.carousel}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`${styles.slide} ${
+                currentSlide === index ? styles.active : ""
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className={styles.slideImage}
+              />
+            </div>
+          ))}
+          {/* 
 <button className={styles.prevButton} onClick={prevSlide}>
   Previous
 </button>
@@ -53,17 +55,18 @@ const Carousel = () => {
   Next
 </button>
 */}
-      </div>
-      <div className={styles.indicators}>
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`${styles.indicator} ${
-              currentSlide === index ? styles.activeIndicator : ""
-            }`}
-            onClick={() => setCurrentSlide(index)}
-          ></div>
-        ))}
+        </div>
+        <div className={styles.indicators}>
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`${styles.indicator} ${
+                currentSlide === index ? styles.activeIndicator : ""
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
