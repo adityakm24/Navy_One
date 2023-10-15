@@ -1,11 +1,11 @@
+/* Top Navbar Styles */
 .navbar {
   background-color: #ffffff;
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  z-index: 2;
+  z-index: 99999;
   top: 0;
   position: fixed; 
   width: 100%; 
@@ -26,11 +26,12 @@
 .right {
   display: flex;
   align-items: center;
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .adminButton {
-  background-color: #4CAF50;
+  background-color: #000080;
+  text-decoration: none;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -43,9 +44,45 @@
   align-items: center;
 }
 
-.adminButton:hover {
-  background-color: #45a049;
-  transition: background-color 0.3s ease;
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; 
+  z-index: 99999; 
+}
+
+
+.adminButton:hover + .dropdownContent,
+.dropdownContent:hover {
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99999; /* Higher z-index to keep the dropdown above other elements */
+  right: 0;
+  top: 100%; 
+  min-width: 160px;
+}
+
+.dropdownContent a {
+  color: #111;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.dropdownContent a:last-child {
+  border-bottom: none;
+}
+
+.dropdownContent a:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Style for the navigation links */
@@ -60,5 +97,3 @@
 .nav-link:hover {
   color: #4CAF50;
 }
-
-

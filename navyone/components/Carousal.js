@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../assets/styles/carasoual.module.css"; // Import the CSS module
+import styles from "../assets/styles/Carasoual.module.css"; // Import the CSS module
 
 const images = [
   "./gallery/pic1.jpg",

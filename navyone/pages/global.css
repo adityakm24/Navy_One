@@ -89,6 +89,7 @@ caption     { background: #eee; }
 
 html, body {
   height: 100%;
+  z-index: -5;
   font-family: SFRounded,"SF Pro Rounded Regular", ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
