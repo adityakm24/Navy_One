@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import BoxComponent from "./BoxComponent";
 import Navbar from "./Navbar";
+import Carousal from "./Carousal";
+import SideNav from "./SideNav";
 import styles from "../assets/styles/BoxContainer.module.css";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const images = ["./gallery/pic1.jpg", "./logo/INS.jpg", "./logo/INS.jpg"];
 
@@ -21,28 +21,16 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <Carousel
-          autoPlay
-          infiniteLoop
-          interval={3000}
-          showIndicators={true}
-          centerMode={true}
-          centerSlidePercentage={100}
-          width={450} // Set your desired width
-          height={150} // Set your desired height
-        >
-          {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Image ${index + 1}`} />
-            </div>
-          ))}
-        </Carousel>
-      </div>
+      <SideNav />
+      <div className={styles.bodyContent}>
+        <div>
+          <Carousal />
+        </div>
 
-      <div className={styles.boxContainer}>
-        <BoxComponent title={box1Title} items={box1Items} />
-        <BoxComponent title={box2Title} items={box2Items} />
+        <div className={styles.boxContainer}>
+          <BoxComponent title={box1Title} items={box1Items} />
+          <BoxComponent title={box2Title} items={box2Items} />
+        </div>
       </div>
     </div>
   );

@@ -89,17 +89,9 @@ caption     { background: #eee; }
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   font-family: SFRounded,"SF Pro Rounded Regular", ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background-color: black;
-  background-image: radial-gradient(#69696959 1.2px, transparent 1px);
-  background-size: 36px 36px;
-  animation: pulsate 20s infinite;
+  background-color: #000080;
+
 }
