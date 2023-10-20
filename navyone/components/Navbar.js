@@ -84,7 +84,7 @@ const Navbar = () => {
           )}
         </div>
 
-          <a href="/contact-numbers/link1" className={styles.navLink}>
+          <a href="/contact/" className={styles.navLink}>
             <button className={styles.adminButton}>Contact Numbers</button>
           </a>
       </div>

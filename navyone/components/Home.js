@@ -24,6 +24,7 @@ const Home = () => {
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
+          <h1 className={styles.header}>Activities</h1>
           <Carousal />
         </div>
 

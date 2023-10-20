@@ -30,7 +30,6 @@ const Carousel = () => {
 
   return (
     <div>
-      <h1 className={styles.header}>Activities</h1>
       <div className={styles.carouselContainer}>
         <div className={styles.carousel}>
           {images.map((image, index) => (
