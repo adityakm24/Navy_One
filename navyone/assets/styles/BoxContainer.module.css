@@ -7,14 +7,16 @@
 }
 
 .header {
-  background-color: #bbafe3;
+  background-color: navy;
   padding: 10px;
+  border-radius: 10px;
   font-size: 20px;
   font-weight: 640;
   margin: 0;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 2%;
+  margin-top: 10%;
 }
 

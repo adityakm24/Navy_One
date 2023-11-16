@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.left}>
         <a href="/">
-          <img src="../logo/INSGaruda.jpg" alt="Left Logo" />
+          <img src="../logo/INSGaruda.png" alt="Left Logo" />
         </a>
 
         {/* Transport Dropdown */}
@@ -90,7 +90,7 @@ const Navbar = () => {
       </div>
       <div className={styles.right}>
         <a href="/">
-          <img src="./logo/INS.jpg" alt="Right Logo" />
+          <img src="./logo/INS.png" alt="Right Logo" />
         </a>
       </div>
     </nav>

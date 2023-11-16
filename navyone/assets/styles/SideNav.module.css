@@ -6,7 +6,7 @@
   z-index: 1;
   top: 0;
   left: -250px; 
-  background-color: #fff; 
+  background-color: navy; 
   overflow-x: auto;
   overflow-y: auto; 
   transition: 0.5s;
@@ -22,7 +22,7 @@
   border-radius: 5px;
   margin-right: 5%;
   margin-left: 5%;
-  background-color: #0d00c2;
+  background-color: rgb(53, 53, 255);
   transition: background-color 0.2s ease-in-out;
   display: block;
   color: white;
@@ -32,34 +32,37 @@
 }
 
 .sidenav a:hover {
-  background-color: #272727; 
+  background-color: rgb(80, 105, 255); 
   color: rgb(255, 255, 255);
   cursor: default;
+  transform: scale(1.05); /* Slightly increase the size */
+
 }
 
 .sidenav .closebtn {
   position: absolute;
+  background-color: navy;
   top: 10px;
   right: 15px;
   font-size: 30px;
   cursor: pointer;
-  color: #111; /* Text color for the close button */
+  color: #ffffff; /* Text color for the close button */
 }
 
 /* Style for the toggle button */
 .toggleBtn {
-  background-color: #ffffff;
+  background-color: navy;
   height: 10%; 
   font-size: 30px;
   cursor: pointer;
   margin-left: 3px;
   margin-top: 100px;
   border: 0px;
-  color: #111; 
+  color: #ffffff; 
 }
 
 .whitestrip {
-  background-color: #fff; 
+  background-color: navy; 
   position: fixed;
   top: 0;
   left: 0;
