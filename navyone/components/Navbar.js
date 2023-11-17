@@ -83,11 +83,12 @@ const Navbar = () => {
               <Link href="/nwwa/link2">Members</Link>
             </div>
           )}
-        </div>
+        </div>  
 
-          <Link href="/contact/" className={styles.navLink}>
-            <button className={styles.adminButton}>Contact Numbers</button>
-          </Link>
+        <Link href="/contact/" passHref>
+          <div className={styles.adminButton}>Contact Numbers</div>
+        </Link>
+
       </div>
       <div className={styles.right}>
         <Link href="/">
