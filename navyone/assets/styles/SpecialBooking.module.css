@@ -36,10 +36,10 @@
 
 .tableContainer th,
 .tableContainer td {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   padding: 8px;
   text-align: left;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Apply the same styles to table cells */
