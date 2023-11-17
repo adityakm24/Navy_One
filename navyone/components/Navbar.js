@@ -91,9 +91,13 @@ const Navbar = () => {
 
       </div>
       <div className={styles.right}>
+      <Link href="./admin" passHref>
+          <div className={styles.loginButton}>Login</div>
+        </Link>
         <Link href="/">
           <img src="./logo/INS.png" alt="Right Logo" />
         </Link>
+
       </div>
     </nav>
   );

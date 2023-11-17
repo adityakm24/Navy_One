@@ -1,0 +1,73 @@
+/* Admin.module.css */
+.adminContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures that the container takes the full viewport height */
+  }
+  
+  .inputContainer {
+    text-align: center;
+    width: 300px; /* Adjust as needed */
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .mobileInputWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputField {
+    flex-grow: 1;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .sendOtpButton {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .submitOtpButton {
+    padding: 10px;
+    margin-top: 20px; /* Adjust as needed */
+    border-radius: 5px;
+    cursor: pointer;
+    /* Add any additional styles you need for the button */
+  }
+  
+  .error {
+    color: red;
+    margin-top: 5px;
+    /* Add any additional styles you need for the error message */
+  }
+
+  .formBox {
+    border: 1px solid #ccc; /* Adjust color as needed */
+    border-radius: 15px; /* This controls the curvature of the corners */
+    padding: 30px; /* This adds space inside the box, around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Optional: Set background color for the form box */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow to make the form pop out */
+  }
+  
+  .formHeading {
+    margin-top: 20px; /* Space between the heading and the input fields */
+    color: #333; /* Color for the heading text */
+  }
