@@ -25,9 +25,9 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.left}>
-        <a href="/">
+        <Link href="/">
           <img src="../logo/INSGaruda.png" alt="Left Logo" />
-        </a>
+        </Link>
 
         {/* Transport Dropdown */}
         <div
@@ -38,9 +38,9 @@ const Navbar = () => {
           <button className={styles.adminButton}>Transport</button>
           {isTransportDropdownOpen && (
             <div className={styles.dropdownContent}>
-              <a href="/facilities/link1">Special Booking</a>
-              <a href="/facilities/link2">School Bus Info</a>
-              <a href="/facilities/link2">Shuttle Bus Info</a>
+              <Link href="/facilities/link1">Special Booking</Link>
+              <Link href="/facilities/link2">School Bus Info</Link>
+              <Link href="/facilities/link2">Shuttle Bus Info</Link>
             </div>
           )}
         </div>
@@ -54,14 +54,14 @@ const Navbar = () => {
           <button className={styles.adminButton}>Facilities</button>
           {isFacilitiesDropdownOpen && (
             <div className={styles.dropdownContent}>
-              <a href="/facilities/link1">Library</a>
-              <a href="/facilities/link2">Gymnasium</a>
-              <a href="/facilities/link2">Shopping Complex</a>
-              <a href="/facilities/link2">NOI</a>
-              <a href="/facilities/link2">Swimming Pool</a>
-              <a href="/facilities/link2">Sagarika (Movie Booking)</a>
-              <a href="/facilities/link2">INCS</a>
-              <a href="/facilities/link2">Bank/ ATM</a>
+              <Link href="/facilities/link1">Library</Link>
+              <Link href="/facilities/link2">Gymnasium</Link>
+              <Link href="/facilities/link2">Shopping Complex</Link>
+              <Link href="/facilities/link2">NOI</Link>
+              <Link href="/facilities/link2">Swimming Pool</Link>
+              <Link href="/facilities/link2">Sagarika (Movie Booking)</Link>
+              <Link href="/facilities/link2">INCS</Link>
+              <Link href="/facilities/link2">Bank/ ATM</Link>
             </div>
           )}
         </div>
@@ -75,23 +75,23 @@ const Navbar = () => {
           <button className={styles.adminButton}>NWWA</button>
           {isNWWADropdownOpen && (
             <div className={styles.dropdownContent}>
-              <a href="/nwwa/link1">Shops</a>
-              <a href="/nwwa/link2">Activities</a>
-              <a href="/nwwa/link2">Training</a>
-              <a href="/nwwa/link2">Important Contact No.</a>
-              <a href="/nwwa/link2">Members</a>
+              <Link href="/nwwa/link1">Shops</Link>
+              <Link href="/nwwa/link2">Activities</Link>
+              <Link href="/nwwa/link2">Training</Link>
+              <Link href="/nwwa/link2">Important Contact No.</Link>
+              <Link href="/nwwa/link2">Members</Link>
             </div>
           )}
         </div>
 
-          <a href="/contact/" className={styles.navLink}>
+          <Link href="/contact/" className={styles.navLink}>
             <button className={styles.adminButton}>Contact Numbers</button>
-          </a>
+          </Link>
       </div>
       <div className={styles.right}>
-        <a href="/">
+        <Link href="/">
           <img src="./logo/INS.png" alt="Right Logo" />
-        </a>
+        </Link>
       </div>
     </nav>
   );
