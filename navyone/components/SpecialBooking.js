@@ -4,21 +4,21 @@ import SideNav from "./SideNav";
 import styles from "../assets/styles/SpecialBooking.module.css";
 
 
-const SpecialBooking = () => {
+const SchoolBus = () => {
   return (
     <div>
       <Navbar />
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
-          <h1 className={styles.header}>Special Booking of Vehicle</h1>
+          <h1 className={styles.header}>School Bus Info</h1>
         </div>
         <div className={styles.tableContainer}>
           <table>
             <tbody>
-              <tr>
-                <td className={styles.tableCell}>Contact Number</td>
-                <td className={styles.tableCell}>0484 289 2468/ 2469</td>
+              <tr style={{ backgroundColor: "rgb(0, 0, 128)" }}>
+                <td className={styles.tableCell} style={{ color: "white" }}>Contact Number</td>
+                <td className={styles.tableCell} style={{ color: "white" }}>0484 289 2468/ 2469</td>
               </tr>
               <tr>
                 <td className={styles.tableCell}>Email</td>
@@ -46,4 +46,5 @@ const SpecialBooking = () => {
   );
 };
 
-export default SpecialBooking;
+export default SchoolBus;
+
