@@ -16,9 +16,9 @@ const SchoolBus = () => {
         <div className={styles.tableContainer}>
           <table>
             <tbody>
-              <tr>
-                <td className={styles.tableCell}>Contact Number</td>
-                <td className={styles.tableCell}>0484 289 2468/ 2469</td>
+              <tr style={{ backgroundColor: "rgb(0, 0, 128)" }}>
+                <td className={styles.tableCell} style={{ color: "white" }}>Contact Number</td>
+                <td className={styles.tableCell} style={{ color: "white" }}>0484 289 2468/ 2469</td>
               </tr>
               <tr>
                 <td className={styles.tableCell}>Email</td>

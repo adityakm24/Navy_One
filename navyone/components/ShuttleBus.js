@@ -15,7 +15,7 @@ const ShuttleBus = () => {
         <div className={styles.tableContainer}>
           <table>
             <tbody>
-            <tr style={{ backgroundColor: "rgb(0, 0, 128)" }}>
+              <tr style={{ backgroundColor: "rgb(0, 0, 128)" }}>
                 <td className={styles.tableCell} style={{ color: "white" }}>
                   School
                 </td>
@@ -32,32 +32,54 @@ const ShuttleBus = () => {
                 <td className={styles.tableCell}></td>
               </tr>
               <tr>
-              <td className={styles.tableCell}>KV1</td>
+                <td className={styles.tableCell}>KV1</td>
                 <td className={styles.tableCell}></td>
                 <td className={styles.tableCell}></td>
               </tr>
               <tr>
-              <td className={styles.tableCell}>KV2</td>
+                <td className={styles.tableCell}>KV2</td>
                 <td className={styles.tableCell}></td>
                 <td className={styles.tableCell}></td>
               </tr>
               <tr>
-              <td className={styles.tableCell}>KV Dronacharya</td>
+                <td className={styles.tableCell}>KV Dronacharya</td>
                 <td className={styles.tableCell}></td>
                 <td className={styles.tableCell}></td>
-                              </tr>
-                              <tr>
-              <td className={styles.tableCell}>KV Port Trust</td>
+              </tr>
+              <tr>
+                <td className={styles.tableCell}>KV Port Trust</td>
                 <td className={styles.tableCell}></td>
                 <td className={styles.tableCell}></td>
-                              </tr>
-                              <tr>
-              <td className={styles.tableCell}>KV Kadvanthra</td>
+              </tr>
+              <tr>
+                <td className={styles.tableCell}>KV Kadvanthra</td>
                 <td className={styles.tableCell}></td>
                 <td className={styles.tableCell}></td>
-                              </tr>
+              </tr>
             </tbody>
           </table>
+        </div>
+        <div className={styles.linksContainer} style={{ paddingLeft: "150px" }}>
+          <div className={styles.linkItem}>
+            <a
+              className={styles.link}
+              href="/path/to/SchoolBusPassForm.doc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              School Bus Pass Form.doc
+            </a>
+          </div>
+          <div className={styles.linkItem}>
+            <a
+              className={styles.link}
+              href="/path/to/RefundForm.doc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Refund against school bus passes form.doc
+            </a>
+          </div>
         </div>
       </div>
     </div>
