@@ -3,25 +3,18 @@ import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 import styles from "../assets/styles/SpecialBooking.module.css";
 
-const ShuttleBus = () => {
+const ShoppingComplex = () => {
   return (
     <div>
       <Navbar />
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
-          <h1 className={styles.header}>Shuttle Bus Info</h1>
+          <h1 className={styles.header}>Shopping Complex</h1>
         </div>
-
-        <div className={styles.tableContainer}>
-          <center><b><h4><u>AMENDED TIME AND ROUTE FOR SHUTTLE SERVICE</u></h4></b></center>
-          
         </div>
-       
         </div>
-      </div>
-
   );
 };
 
-export default ShuttleBus;
+export default ShoppingComplex;
