@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/dbConnect";
-import DepartmentHead from "../../../models/departmentHead";
+import DepartmentHead from "../../../../models/departmentHead";
 
 dbConnect();
 
