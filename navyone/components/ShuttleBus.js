@@ -15,9 +15,16 @@ const ShuttleBus = () => {
 
         <div className={styles.tableContainer}>
           <center><h4><b><u>AMENDED TIME AND ROUTE FOR SHUTTLE SERVICE</u></b></h4></center>
-          
         </div>
-       
+        <div style={{
+      border: '1px solid #000', // Border color
+      padding: '3px', // Padding inside the box
+      margin: '50px', // Margin around the box
+      width: '150px' // Set a specific width
+    }}>
+      <p>START</p>
+      <p>FINISH</p>
+    </div>
         </div>
       </div>
 
