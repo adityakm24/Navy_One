@@ -18,13 +18,14 @@ const ShuttleBus = () => {
         </div>
         <div style={{
       border: '1px solid #000', // Border color
-      padding: '3px', // Padding inside the box
-      margin: '50px', // Margin around the box
-      width: '150px' // Set a specific width
+      padding: '4px', // Padding inside the box
+      margin: '15px 0 0 400px', // Margin around the box
+      width: '180px' // Set a specific width
     }}>
       <p>START</p>
       <p>FINISH</p>
     </div>
+    
         </div>
       </div>
 
