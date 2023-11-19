@@ -1,0 +1,42 @@
+.navbar {
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    text-decoration: none;
+    overflow: hidden;
+    height: 175px; /* Adjust the height as needed */
+  }
+  
+  /* Add this rule to ensure the img scales properly within the navbar */
+  .navbar img {
+    max-height: 100%; /* Ensures the image doesn't exceed the height of the navbar */
+    max-width: 100%; /* Ensures the image doesn't exceed the width of the navbar */
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+  }
+  
+  .left img {
+    max-height: 100px; /* Adjust the height of the logo as needed */
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  
+  .textforwelcome {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    left: 700px;
+    top: 40px;
+  }
+    

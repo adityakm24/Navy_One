@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import styles from "../assets/styles/SideNav.module.css"; // Import the CSS module
+import Link from "next/link";
 
 const CollapsibleSideNav = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(true);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div>
-      <div className={`${styles.whitestrip}`}>
-        <button
-          className={styles.toggleBtn}
-          onClick={toggleNav}
-          aria-expanded={isNavOpen}
-        >
-          &#9776;
-        </button>
-      </div>
+    <div onClick={toggleNav}>
+      <div className={`${styles.whitestrip}`}></div>
       <div
         className={`${styles.sidenav} ${isNavOpen ? styles.opened : ""}`}
         id="mySidenav"
+        onClick={toggleNav}
       >
         <div className={styles.profile}>
           <img
@@ -34,19 +32,21 @@ const CollapsibleSideNav = () => {
             <p>Officer</p>
           </div>
         </div>
-        <button
-          className={styles.closebtn}
-          onClick={toggleNav}
-          aria-label="Close"
-         
-        >
+        <button className={styles.closebtn} aria-label="Close">
           &times;
         </button>
-        <a href="#">My Complaints</a>
-        <a href="#">NORA</a>
-        <a href="#">SNCO(O) MESS</a>
-        <a href="#">Transit</a>
-        <a href="#">NOI</a>
+        <Link href="/deptadduser">
+          <div onClick={stopPropagation}>Add User</div>
+        </Link>
+        <Link href="/viewdeptcomplaints">
+          <div onClick={stopPropagation}>View Complaints</div>
+        </Link>
+        <Link href="/pin-locations">
+          <div onClick={stopPropagation}>Pin Locations</div>
+        </Link>
+        <Link href="/settings">
+          <div onClick={stopPropagation}>Settings</div>
+        </Link>
       </div>
     </div>
   );
