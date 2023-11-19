@@ -1,16 +1,18 @@
 /*import dbConnect from "../../../utils/dbConnect";
-import DepartmentHead from "../../../models/departmentHead";
+import Complaint from "../../../models/complaint";
 
 dbConnect();
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
+  const { departmentId } = req.query;
+
+  if (req.method !== "GET") {
     return res.status(405).end(); // Method Not Allowed
   }
 
   try {
-    const deptHead = await DepartmentHead.create(req.body);
-    res.status(201).json(deptHead);
+    const complaints = await Complaint.find({ department_id: departmentId });
+    res.status(200).json(complaints);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

@@ -14,7 +14,7 @@ const ShuttleBus = () => {
         </div>
 
         <div className={styles.tableContainer}>
-          <center><b><h4><u>AMENDED TIME AND ROUTE FOR SHUTTLE SERVICE</u></h4></b></center>
+          <center><h4><b><u>AMENDED TIME AND ROUTE FOR SHUTTLE SERVICE</u></b></h4></center>
           
         </div>
        

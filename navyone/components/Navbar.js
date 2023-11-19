@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link href="/Gymnasium">Gymnasium</Link>
               <Link href="/ShoppingComplex">Shopping Complex</Link>
               <Link href="/facilities/link2">NOI</Link>
-              <Link href="/facilities/link2">Swimming Pool</Link>
+              <Link href="/SwimmingPool">Swimming Pool</Link>
               <Link href="/facilities/link2">Sagarika (Movie Booking)</Link>
               <Link href="/facilities/link2">INCS</Link>
               <Link href="/facilities/link2">Bank/ ATM</Link>
