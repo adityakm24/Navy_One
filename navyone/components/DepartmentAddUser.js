@@ -1,15 +1,36 @@
-// pages/add-user.js
+// AddUser.js
 
 import React, { useState } from 'react';
 import DepartmentSideNav from '@/components/DepartmentSideNav';
 import AdminNavbar from '@/components/AdminNavbar';
+import styles from '@/assets/styles/DeptAddUser.module.css';
 
 const AddUser = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+
+  const handlePhoneNumberChange = (e) => {
+    // Allow only numeric input
+    const numericValue = e.target.value.replace(/[^0-9]/g, '');
+    setPhoneNumber(numericValue);
+    setPhoneError(''); // Clear phone number error when typing
+  };
+
+  const isValidPhoneNumber = (number) => {
+    // Basic validation for a 10-digit phone number
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(number);
+  };
 
   const handleAddUser = () => {
+    // Validate phone number before submitting
+    if (!isValidPhoneNumber(phoneNumber)) {
+      setPhoneError('Please enter a valid 10-digit phone number.');
+      return;
+    }
+
     // Handle the logic for adding a user (e.g., sending data to a server)
 
     // For demonstration purposes, you can log the user details to the console
@@ -20,40 +41,44 @@ const AddUser = () => {
 
   return (
     <div>
-        <DepartmentSideNav/>
-        <AdminNavbar/>
-      <h1>Add User</h1>
-      <div>
-        <label>
+      <DepartmentSideNav />
+      <AdminNavbar />
+      <div className={styles.centeredcontainer}>
+        <h1>Add a User</h1>
+        <div className={styles.label}>
           Name:
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className={styles.input}
           />
-        </label>
-      </div>
-      <div>
-        <label>
-          Phone Number:
+        </div>
+        <div className={styles.label}>
+          Phone:
           <input
-            type="text"
+            type="tel"
             value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            onChange={handlePhoneNumberChange}
+            className={styles.input}
           />
-        </label>
-      </div>
-      <div>
-        <label>
+          {phoneError && <p className={styles.error}>{phoneError}</p>}
+        </div>
+        <div className={styles.label}>
           Password:
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+           
+            className={styles.input}
           />
-        </label>
+        </div>
+        <p>*Leave password as blank to apply default password</p>
+        <button onClick={handleAddUser} className={styles.button}>
+          Add User
+        </button>
       </div>
-      <button onClick={handleAddUser}>Add User</button>
     </div>
   );
 };

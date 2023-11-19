@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AdminNavbar from './AdminNavbar';
+import DeptNavbar from './DeptNavbar';
 import styles from "../assets/styles/DeptLogin.module.css";
 import { Router, useRouter } from 'next/router';
 const DeptLogin = () => {
@@ -27,7 +27,7 @@ const DeptLogin = () => {
 
   return (
     <div className={styles.adminContainer}>
-      <AdminNavbar />
+      <DeptNavbar />
       <div className={styles.formBox}>
         <h2 className={styles.formHeading}>Department Login</h2>
         <div className={styles.inputContainer}>
@@ -55,7 +55,7 @@ const DeptLogin = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div >
-          <button onClick={handleLogin}  className={styles.loginbutton}>Login</button>
+          <button onClick={handleLogin} type= {"submit"} className={styles.loginbutton}>Login</button>
           {loginError && <p className={styles.error}>{loginError}</p>}
         </div>
       </div>

@@ -125,7 +125,8 @@ const SwimmingPool = () => {
               </tbody>
             </table>
           </center>
-
+          <br />
+          <br />
           <center>
             <h4>
               <b>
