@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/dbConnect";
-import DepartmentHead from "../../../models/departmentHead";
+import Location from "../../../models/location";
 
 dbConnect();
 
@@ -9,8 +9,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const deptHead = await DepartmentHead.create(req.body);
-    res.status(201).json(deptHead);
+    const location = await Location.create(req.body);
+    res.status(201).json(location);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
