@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AdminNavbar from './AdminNavbar';
 import styles from "../assets/styles/UserLogin.module.css";
 
+
 const UserLogin = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [otp, setOtp] = useState('');
@@ -11,7 +12,7 @@ const UserLogin = () => {
   const handleMobileNumberChange = (e) => {
     const value = e.target.value;
     // Regex to allow only numbers
-    const re = /^[0-9\b]+$/; 
+    const re = /^[0-9\b]+$/;
 
     // If value is not blank, then test the regex
     if (value === '' || re.test(value)) {
@@ -19,10 +20,31 @@ const UserLogin = () => {
     }
   };
 
-  const handleSendOtp = () => {
+  const handleSendOtp = async () => {
     if (mobileNumber.length === 10) {
-      // Logic to send OTP goes here
-      setOtpSent(true);
+      try {
+        console.log("success")
+        const response = await fetch('/api/sendotp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ mobileNumber })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          setOtpSent(true);
+        } else {
+          console.error('Error sending OTP:', data.error);
+          setOtpError(data.error || 'Failed to send OTP');
+        }
+      } catch (error) {
+        console.error('Error sending OTP:', error);
+        setOtpError('Error sending OTP');
+      }
+    } else {
+      setOtpError('Please enter a valid mobile number');
     }
   };
 

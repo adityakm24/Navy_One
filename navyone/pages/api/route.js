@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-import { connectionSrt1, connectionSrt2 } from "@/models/connection";
+import { connectionSrt } from "@/models/connection";
 import { NumberModel } from "@/models/numberSchema"; 
 
 export default async function handler(req, res) {
   try {
     console.log("Attempting to connect to the database...");
-    await mongoose.connect(connectionSrt2);
+    await mongoose.connect(connectionSrt);
     console.log("DB Connected");
 
     // const newData = {
