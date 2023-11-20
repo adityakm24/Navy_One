@@ -1,5 +1,3 @@
-// models/number.js
-
 import mongoose from "mongoose";
 
 const numberSchema = new mongoose.Schema({
