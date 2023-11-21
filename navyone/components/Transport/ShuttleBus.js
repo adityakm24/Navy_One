@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import SideNav from "../SideNav";
 import styles from "../../assets/styles/SpecialBooking.module.css";
-
+<link rel="icon" href="/favicon.ico" sizes="any" />
 const ShuttleBus = () => {
   const nodes = ["Travancore gate", "War Memorial", "Node 3", "Node 4", "Node 5", "Node 6", "Node 7", "Node 8", "Node 9", "Node 10"];
   const arrows = [{from: 0, to: 1}, {from: 1, to: 2}, {from: 2, to: 3}, {from: 3, to: 4}, {from: 4, to: 5}, {from: 5, to: 6}, {from: 6, to: 7}, {from: 7, to: 8}, {from: 8, to: 9}, {from: 9, to: 0}];
@@ -25,6 +25,7 @@ const ShuttleBus = () => {
       width: '180px' // Set a specific width
     }}>
       <p>START</p>
+      
       <p>FINISH</p>
     </div>
     <div style={{ paddingLeft: "150px", margin: '15px 300px 0 300px',width:'800px' }}  >
