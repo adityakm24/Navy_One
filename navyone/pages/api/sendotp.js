@@ -22,7 +22,7 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             route: 'otp',
             numbers: mobileNumber,
-            variables_values: `Your OTP code is: ${otp}`
+            variables_values: otp
           })
         });
   
