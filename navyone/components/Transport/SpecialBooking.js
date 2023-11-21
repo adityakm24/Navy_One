@@ -11,7 +11,7 @@ const SchoolBus = () => {
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
-          <h1 className={styles.header}>School Bus Info</h1>
+          <h1 className={styles.header}>Special Booking</h1>
         </div>
         <div className={styles.tableContainer}>
           <table>

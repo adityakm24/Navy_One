@@ -15,7 +15,6 @@ const ShuttleBus = () => {
         <div>
           <h1 className={styles.header}>Shuttle Bus Info</h1>
         </div>
-
         <div className={styles.tableContainer}>
           <center><h4><b><u>AMENDED TIME AND ROUTE FOR SHUTTLE SERVICE</u></b></h4></center>
         </div>
@@ -30,142 +29,96 @@ const ShuttleBus = () => {
     </div>
     <div style={{ paddingLeft: "150px", margin: '15px 300px 0 300px',width:'800px' }}  >
     <center><h4><b><u>TIMING OF SHUTTLE SERVICE</u></b></h4></center>
-    <table border="1">
+    <table border="0">
+
 <tr>
-<th>Time</th>
-<th>Number of Trips</th>
+<td><center>0700 - 01 Trip</center></td>
+<td><center>1700h - 01 Trip</center></td>
 </tr>
 <tr>
-<td><center>0700</center></td>
-<td>01 Trip</td>
+<td><center>0730 - 01 Trip</center></td>
+<td><center>1730h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0730</td>
-<td>1</td>
+<td><center>0800 - 01 Trip</center></td>
+<td><center>1800h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0800</td>
-<td>1</td>
+<td><center>0815 - 01 Trip</center></td>
+<td><center>1830h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0815</td>
-<td>1</td>
+<td><center>0830 - 01 Trip</center></td>
+<td><center>1900h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0830</td>
-<td>1</td>
+<td><center>0845 - 01 Trip</center></td>
+<td><center>1930h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0845</td>
-<td>1</td>
+<td><center>0900 - 01 Trip</center></td>
+<td><center>2000h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0900</td>
-<td>1</td>
+<td><center>0930 - 01 Trip</center></td>
+<td><center>2100h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>0930</td>
-<td>1</td>
+<td><center>1000h* - 01 Trip</center></td>
+<td><center>2200h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>1000h*</td>
-<td>1</td>
+<td><center>1030h - 01 Trip</center></td>
+<td><center>2300h - 01 Trip</center></td>
 </tr>
 <tr>
-<td>1030h</td>
-<td>1</td>
+<td><center>1100h - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1100h</td>
-<td>1</td>
+<td><center>1130h** - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1130h**</td>
-<td>1</td>
+<td><center>1200h** - 02 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1200h**</td>
-<td>1</td>
+<td><center>1230h** - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1230h**</td>
-<td>1</td>
+<td><center>1300h** - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1300h**</td>
-<td>1</td>
+<td><center>1445h - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1445h</td>
-<td>1</td>
+<td><center>1530h** - 02 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1530h**</td>
-<td>1</td>
+<td><center>1600h** - 02 Trip</center></td>
+<td><center></center></td>
 </tr>
 <tr>
-<td>1600h**</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1620h**</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1700 h</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1730h</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1730h</td>
-<td>Break</td>
-</tr>
-<tr>
-<td>1800h</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1830h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>1900h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>1930h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2000h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2100h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2200h</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2300h</td>
-<td>0</td>
+<td><center>1620h** - 01 Trip</center></td>
+<td><center></center></td>
 </tr>
 </table>
     </div>
     <div style={{
       margin: '15px 0 0 450px'
     }}>
-      <p>* ADDITIONAL SHUTTLE BUS SERVICE AS PER AVAILABILITY OF BUSES</p>
-    <p>Personnel Coming in between 2000-2300hrs may contact duty JCO at Travancore or Contact MT Pool on 9496450666 for transport requirements. The vehicle will be provided will be provided for personnel in groups as per availability.</p>
+      <p><b>* ADDITIONAL SHUTTLE BUS SERVICE AS PER AVAILABILITY OF BUSES</b></p>
+    <p><b>* Personnel Coming in between 2000-2300hrs may contact duty JCO at Travancore or Contact MT Pool on 9496450666 for transport requirements. The vehicle will be provided will be provided for personnel in groups as per availability.</b></p>
     </div>
    
         </div>
       </div>
+
 
   );
 };
