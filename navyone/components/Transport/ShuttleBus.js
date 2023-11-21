@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import SideNav from "./SideNav";
-import styles from "../assets/styles/SpecialBooking.module.css";
+import Navbar from "../Navbar";
+import SideNav from "../SideNav";
+import styles from "../../assets/styles/SpecialBooking.module.css";
 
 const ShuttleBus = () => {
   const nodes = ["Travancore gate", "War Memorial", "Node 3", "Node 4", "Node 5", "Node 6", "Node 7", "Node 8", "Node 9", "Node 10"];

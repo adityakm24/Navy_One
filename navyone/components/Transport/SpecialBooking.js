@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import SideNav from "./SideNav";
-import styles from "../assets/styles/SpecialBooking.module.css";
+import Navbar from "../Navbar";
+import SideNav from "../SideNav";
+import styles from "../../assets/styles/SpecialBooking.module.css";
 
 
 const SchoolBus = () => {

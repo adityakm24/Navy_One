@@ -1,7 +1,7 @@
 // pages/index.js
 
 import React from "react";
-import ShuttleBus from "@/components/ShuttleBus";
+import ShuttleBus from "@/components/Transport/ShuttleBus";
 
 function ShuttleBusPage() {
   return <ShuttleBus />;
