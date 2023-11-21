@@ -39,9 +39,9 @@ const Navbar = () => {
           <button className={styles.adminButton}>Transport</button>
           {isTransportDropdownOpen && (
             <div className={styles.dropdownContent}>
-              <Link href="/SpecialBooking">Special Booking</Link>
-              <Link href="/SchoolBus">School Bus Info</Link>
-              <Link href="/ShuttleBus">Shuttle Bus Info</Link>
+              <Link href="/Transport/SpecialBooking">Special Booking</Link>
+              <Link href="/Transport/SchoolBus">School Bus Info</Link>
+              <Link href="/Transport/ShuttleBus">Shuttle Bus Info</Link>
             </div>
           )}
         </div>
