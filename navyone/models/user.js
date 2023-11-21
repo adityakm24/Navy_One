@@ -1,12 +1,10 @@
-// models/user.js
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  phone: { type: String, unique: true },
-  password_hash: String,
-  otp: String,
-  department_id: { type: mongoose.Schema.Types.ObjectId, ref: "Department" },
+  mobileNumber: { type: String, unique: true, required: true },
+  otp: String, 
+  otpTimestamp: Date, 
+  // ... other fields ...
 });
 
-module.exports = mongoose.model("User", userSchema);
+export default mongoose.models.User || mongoose.model('User', userSchema);
