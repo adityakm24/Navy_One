@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../assets/styles/DepartmentNav.module.css";
+import styles from "../../assets/styles/Dept/DepartmentNav.module.css";
 
 const DepartmentNav = () => {
   return (

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import DepartmentSideNav from "@/components/Dept/DepartmentSideNav";
 import AdminNavbar from "@/components/Admin/AdminNavbar";
-import styles from "@/assets/styles/DeptAddUser.module.css";
+import styles from "@/assets/styles/Dept/DeptAddUser.module.css";
 
 const AddUser = () => {
   const [name, setName] = useState("");
