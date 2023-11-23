@@ -20,7 +20,7 @@
             if (t === 1) {
               setCanResend(true);
               clearInterval(interval);
-              return 60; // Reset timer for next resend
+              return 60; 
             }
             return t - 1;
           });
@@ -87,7 +87,7 @@
 
         const data = await response.json();
         if (response.ok) {
-          router.push('/');
+          router.push('./user/dashboard');
         } else {
           setOtpError(data.error || 'Error verifying OTP');
         }
