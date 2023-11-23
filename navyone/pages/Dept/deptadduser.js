@@ -1,5 +1,5 @@
 import React from "react";
-import DepartmentAddUser from "@/components/DepartmentAddUser";
+import DepartmentAddUser from "@/components/Dept/DepartmentAddUser";
 
 function deptadduser() {
   return <DepartmentAddUser />;

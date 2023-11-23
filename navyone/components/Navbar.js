@@ -91,7 +91,7 @@ const Navbar = () => {
 
       </div>
       <div className={styles.right}>
-      <Link href="/user/userlogin" passHref>
+      <Link href="/User/userlogin" passHref>
           <div className={styles.loginButton}>Login</div>
         </Link>
         <Link href="/">

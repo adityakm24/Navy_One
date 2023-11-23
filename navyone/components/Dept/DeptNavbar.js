@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../assets/styles/AdminNavbar.module.css";
+import styles from "../../assets/styles/Admin/AdminNavbar.module.css";
 
 const AdminNavbar = () => {
   return (
@@ -14,12 +14,10 @@ const AdminNavbar = () => {
 
       <div className={styles.right}>
         {/* Dept Login Button */}
-        <Link href="/deptlogin">
-          <button className={`${styles.adminButton} ${styles.deptLoginButton}`}>Dept Login</button>
-        </Link> 
+ 
 
         {/* Admin Login Button */}
-        <Link href="/adminlogin">
+        <Link href="/Admin/adminlogin">
           <button className={`${styles.adminButton} ${styles.loginButton}`}>Admin Login</button>
         </Link> 
 

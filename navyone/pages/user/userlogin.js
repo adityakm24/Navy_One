@@ -1,5 +1,5 @@
 import React from "react";
-import UserLogin from "@/components/UserLogin";
+import UserLogin from "@/components/User/UserLogin";
 
 function userlogin() {
   return <UserLogin />;

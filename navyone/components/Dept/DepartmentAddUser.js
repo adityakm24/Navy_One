@@ -1,21 +1,21 @@
 // AddUser.js
 
-import React, { useState } from 'react';
-import DepartmentSideNav from '@/components/DepartmentSideNav';
-import AdminNavbar from '@/components/AdminNavbar';
-import styles from '@/assets/styles/DeptAddUser.module.css';
+import React, { useState } from "react";
+import DepartmentSideNav from "@/components/Dept/DepartmentSideNav";
+import AdminNavbar from "@/components/Admin/AdminNavbar";
+import styles from "@/assets/styles/DeptAddUser.module.css";
 
 const AddUser = () => {
-  const [name, setName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [password, setPassword] = useState('');
-  const [phoneError, setPhoneError] = useState('');
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
   const handlePhoneNumberChange = (e) => {
     // Allow only numeric input
-    const numericValue = e.target.value.replace(/[^0-9]/g, '');
+    const numericValue = e.target.value.replace(/[^0-9]/g, "");
     setPhoneNumber(numericValue);
-    setPhoneError(''); // Clear phone number error when typing
+    setPhoneError(""); // Clear phone number error when typing
   };
 
   const isValidPhoneNumber = (number) => {
@@ -27,16 +27,16 @@ const AddUser = () => {
   const handleAddUser = () => {
     // Validate phone number before submitting
     if (!isValidPhoneNumber(phoneNumber)) {
-      setPhoneError('Please enter a valid 10-digit phone number.');
+      setPhoneError("Please enter a valid 10-digit phone number.");
       return;
     }
 
     // Handle the logic for adding a user (e.g., sending data to a server)
 
     // For demonstration purposes, you can log the user details to the console
-    console.log('Name:', name);
-    console.log('Phone Number:', phoneNumber);
-    console.log('Password:', password);
+    console.log("Name:", name);
+    console.log("Phone Number:", phoneNumber);
+    console.log("Password:", password);
   };
 
   return (
@@ -70,7 +70,6 @@ const AddUser = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-           
             className={styles.input}
           />
         </div>
