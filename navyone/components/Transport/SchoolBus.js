@@ -10,9 +10,11 @@ const SchoolBus = () => {
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
-          <h1 className={styles.header}>School Bus Info</h1>
+        <h1 className={styles.header} style={{ textAlign: 'left' }}>School Bus Info</h1>
+
         </div>
-        <div className={styles.tableContainer}>
+        <center>
+        <div className={styles.tableContainer} >
           <table>
             <tbody>
               <tr style={{ backgroundColor: "rgb(0, 0, 128)" }}>
@@ -60,7 +62,7 @@ const SchoolBus = () => {
           </table>
         </div>
         <div className={styles.linksContainer} style={{ paddingLeft: "150px" }}>
-          <div className={styles.linkItem}>
+        <div className={styles.linkItem} style={{ marginLeft: '-880px' }}>
             <a
               className={styles.link}
               href="/path/to/SchoolBusPassForm.doc"
@@ -70,7 +72,7 @@ const SchoolBus = () => {
               School Bus Pass Form.doc
             </a>
           </div>
-          <div className={styles.linkItem}>
+          <div className={styles.linkItem} style={{ marginLeft: '-765px' }}>
             <a
               className={styles.link}
               href="/path/to/RefundForm.doc"
@@ -79,8 +81,10 @@ const SchoolBus = () => {
             >
               Refund against school bus passes form.doc
             </a>
+            
           </div>
         </div>
+        </center>
       </div>
     </div>
   );

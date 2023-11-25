@@ -21,6 +21,7 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 2%;
+    
 }
 
 
@@ -49,3 +50,34 @@
   text-align: left;
 }
 
+.noticeContainer {
+  max-width: 800px;
+  margin: 20px auto; /* Adjust margin as needed */
+  padding: 20px;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bodyContent {
+  text-align: center;
+}
+
+.headingContainer {
+  margin-bottom: 15px;
+}
+
+.tableContainer {
+  margin: 0 auto;
+  width: 100%;
+  border: 0; /* Remove table border */
+}
+
+.noBorder {
+  border: 0 !important;
+  border-collapse: collapse !important;
+}
+
+.additionalInfo {
+  margin-top: 10px; /* Adjust the margin-top as needed */
+  text-align: left; /* Align text to the left */
+}

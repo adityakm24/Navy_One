@@ -11,8 +11,9 @@ const SchoolBus = () => {
       <SideNav />
       <div className={styles.bodyContent}>
         <div>
-          <h1 className={styles.header}>Special Booking</h1>
+        <h1 className={styles.header} style={{ textAlign: 'left' }}>Special Booking</h1>
         </div>
+        <center>
         <div className={styles.tableContainer}>
           <table>
             <tbody>
@@ -41,6 +42,7 @@ const SchoolBus = () => {
             </tbody>
           </table>
         </div>
+        </center>
       </div>
     </div>
   );
