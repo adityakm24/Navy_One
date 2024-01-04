@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import fetch from 'node-fetch';
-import User from '@/models/User'; // Adjust the path as necessary
-import dbConnect from '@/utils/dbConnect'; // Adjust the path to your dbConnect utility
+import User from '@/models/User'; 
+import dbConnect from '@/utils/dbConnect'; 
 
 export default async function handler(req, res) {
   await dbConnect();

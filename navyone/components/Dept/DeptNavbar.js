@@ -23,7 +23,7 @@ const AdminNavbar = () => {
 
         {/* Right Logo */}
         <Link href="/">
-          <img src="./logo/INS.png" alt="Right Logo" className={styles.logo} />
+          <img src="../logo/INS.png" alt="Right Logo" className={styles.logo} />
         </Link>
       </div>
     </nav>
