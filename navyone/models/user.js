@@ -2,9 +2,8 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
   mobileNumber: { type: String, unique: true, required: true },
-  otp: String, 
+  otp: {type: String,required: true}, 
   otpTimestamp: Date, 
-  // ... other fields ...
-});
+},{timestamps:true});
 
 export default mongoose.models.User || mongoose.model('User', userSchema);
