@@ -1,34 +1,41 @@
-import React, { useState } from "react";
-import DeptNavbar from "../Dept/DeptNavbar";
-import styles from "../../assets/styles/Dept/DeptLogin.module.css";
-import { Router, useRouter } from "next/router";
+import React, { useState } from 'react';
+import DeptNavbar from '../Dept/DeptNavbar';
+import styles from '../../assets/styles/Dept/DeptLogin.module.css';
+import { useRouter } from 'next/router';
+import axios from 'axios';
+
 const AdminLogin = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [loginError, setLoginError] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
   const router = useRouter();
 
   const handleUsernameChange = (e) => {
-    const value = e.target.value;
-    setUsername(value);
+    setUsername(e.target.value);
   };
 
-  const handleLogin = () => {
-    // Simulate login logic for demonstration purposes
-    if (username === "admin" && password === "admin") {
-      setLoginError("");
-      router.push("/depthome");
-      // Redirect to the desired page after successful login
-      // You can use the Next.js router or any other method for navigation
-    } else {
-      setLoginError("Invalid username or password");
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/api/admin/login', { username, password });
+      if (response.data.needsProfileCompletion) {
+        router.push('/admin/complete-profile'); // Redirect to profile completion page
+      } else {
+        router.push('/depthome'); // Redirect to admin dashboard
+      }
+    } catch (error) {
+      setLoginError(error.response?.data?.message || 'Invalid username or password');
     }
   };
 
   return (
     <div className={styles.adminContainer}>
       <DeptNavbar />
-      <div className={styles.formBox}>
+      <form className={styles.formBox} onSubmit={handleLogin}>
         <h2 className={styles.formHeading}>Admin Login</h2>
         <div className={styles.inputContainer}>
           <div className={styles.inputGroup}>
@@ -56,19 +63,15 @@ const AdminLogin = () => {
               placeholder="Enter your password"
               className={styles.inputField}
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
             />
           </div>
-          <button
-            onClick={handleLogin}
-            type={"submit"}
-            className={styles.loginbutton}
-          >
+          <button type="submit" className={styles.loginButton}>
             Login
           </button>
           {loginError && <p className={styles.error}>{loginError}</p>}
         </div>
-      </div>
+      </form>
     </div>
   );
 };

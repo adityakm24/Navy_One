@@ -1,9 +1,10 @@
-// models/department.js
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const departmentSchema = new mongoose.Schema({
-  name: String,
+  name: { type: String, required: true, unique: true },
   description: String,
-});
+  head: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+}, { timestamps: true });
 
-module.exports = mongoose.model("Department", departmentSchema);
+const Department = mongoose.model('Department', departmentSchema);
+

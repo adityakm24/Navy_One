@@ -1,8 +1,8 @@
 import React from "react";
-import UserDashboard from "@/components/User/UserDashboard";
+import ComplaintForm from "@/components/Complaintform/ComplaintForm";
 
 function userdashboard() {
-  return <UserDashboard/>;
+  return <ComplaintForm/>;
 }
 
 export default userdashboard;
