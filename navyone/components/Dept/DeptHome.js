@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BoxComponent from "../BoxComponent";
 import Carousal from "../Carousal";
-import styles from "../assets/styles/BoxContainer.module.css";
+import styles from "../../assets/styles/BoxContainer.module.css";
 import AdminNavbar from "../Admin/AdminNavbar";
 import DepartmentSideNav from "@/components/Dept/DepartmentSideNav";
 

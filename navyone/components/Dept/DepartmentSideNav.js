@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../assets/styles/SideNav.module.css"; // Import the CSS module
+import styles from "../../assets/styles/SideNav.module.css"; // Import the CSS module
 import Link from "next/link";
 
 const CollapsibleSideNav = () => {
@@ -35,10 +35,10 @@ const CollapsibleSideNav = () => {
         <button className={styles.closebtn} aria-label="Close">
           &times;
         </button>
-        <Link href="/deptadduser">
+        <Link href="/Dept/deptadduser">
           <div onClick={stopPropagation}>Add User</div>
         </Link>
-        <Link href="/viewdeptcomplaints">
+        <Link href="/Dept/viewdeptcomplaints">
           <div onClick={stopPropagation}>View Complaints</div>
         </Link>
         <Link href="/pin-locations">

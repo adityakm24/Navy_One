@@ -17,7 +17,7 @@ const DeptLogin = () => {
     // Simulate login logic for demonstration purposes
     if (username === "admin" && password === "admin") {
       setLoginError("");
-      router.push("/depthome");
+      router.push("/Dept/depthome");
       // Redirect to the desired page after successful login
       // You can use the Next.js router or any other method for navigation
     } else {
