@@ -4,7 +4,7 @@ import styles from "../../assets/styles/User/UserLogin.module.css";
 import { useRouter } from "next/router";
 
 const UserLogin = () => {
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter(); 
   const [mobileNumber, setMobileNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
@@ -87,7 +87,7 @@ const UserLogin = () => {
 
       const data = await response.json();
       if (response.ok) {
-        router.push("./user/dashboard");
+        router.push("./userdashboard");  //Bug Has to fixed
       } else {
         setOtpError(data.error || "Error verifying OTP");
       }

@@ -6,6 +6,7 @@ const complaintSchema = new mongoose.Schema({
   photo: String,
   location: String,
   department_name: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Department' }],
+  department_id: {type:mongoose.Schema.Types.ObjectId, ref:'Department'},
   status: String,
   remarks: String,
 }, { timestamps: true });
