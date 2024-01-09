@@ -25,7 +25,7 @@ function ComplaintForm() {
     e.preventDefault();
     const dataToSubmit = {
       ...formData,
-      status: 'Open', 
+      status: 'Open',
     };
     try {
       const response = await axios.post('/api/complaints', dataToSubmit);

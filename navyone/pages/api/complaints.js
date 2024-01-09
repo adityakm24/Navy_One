@@ -1,9 +1,9 @@
+//by sowrabh
 import dbConnect from '@/utils/dbConnect.js'; 
 import Complaints from '@/models/complaint.js'; 
 
 export default async function handler(req, res) {
   const { method } = req;
-
   await dbConnect();
 
   if (method === 'POST') {
