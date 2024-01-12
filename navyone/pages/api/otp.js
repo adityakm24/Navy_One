@@ -1,5 +1,4 @@
-// handler.js
-
+//by sowrabh
 import bcrypt from 'bcryptjs';
 import fetch from 'node-fetch';
 import jwt from 'jsonwebtoken';

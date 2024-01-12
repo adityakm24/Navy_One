@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import styles from '../../assets/styles/ComplaintForm.module.css';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function ComplaintForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +12,8 @@ function ComplaintForm() {
     department_name: '',
     remarks: '',
   });
+  
+  const router = useRouter();
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -20,12 +24,23 @@ function ComplaintForm() {
     });
   };
 
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken'); 
+    // Check if the access token is present
+    if (!accessToken) {
+      router.push('/user/userlogin'); // Redirect to the login page if not authenticated
+    }
+
+    // If you have additional checks or validation for the access token, add them here
+
+  }, [router]);
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const dataToSubmit = {
       ...formData,
-      status: 'Open', 
+      status: 'Open',
     };
     try {
       const response = await axios.post('/api/complaints', dataToSubmit);

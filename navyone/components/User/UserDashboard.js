@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
-// Import any additional components or libraries you need
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const UserDashboard = () => {
   const [photo, setPhoto] = useState(null); // for photo upload
   const [location, setLocation] = useState(''); // for location input
   const [remark, setRemark] = useState(''); // for remarks input
   const [department, setDepartment] = useState(''); // for department tagging
+  const router = useRouter();
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken'); 
+    // Check if the access token is present
+    if (!accessToken) {
+      router.push('/user/userlogin'); // Redirect to the login page if not authenticated
+    }
+
+    // If you have additional checks or validation for the access token, add them here
+
+  }, [router]);
+  
 
   // Handler for photo upload
   const handlePhotoChange = (event) => {

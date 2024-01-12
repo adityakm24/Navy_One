@@ -1,15 +1,5 @@
-// login.js
-
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import User from "@/models/UserLogin.js";
-import dbConnect from "@/utils/dbConnect.js";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
-const REDIRECT_URL = "/verification-page"; // Specify the URL to redirect to
+import dbConnect from '@/utils/dbConnect.js'; 
+import Admin from '@/models/admin.js'; 
 
 export default async function handler(req, res) {
   await dbConnect();
