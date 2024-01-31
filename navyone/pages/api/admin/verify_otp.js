@@ -2,7 +2,7 @@
 
 import bcrypt from "bcryptjs";
 import fetch from "node-fetch";
-import Admin from "@/models/Admin.js"; // Assuming you are using the Admin model
+import Admin from "@/models/admin"; // Assuming you are using the Admin model
 import dbConnect from "@/utils/dbConnect.js";
 import dotenv from "dotenv";
 

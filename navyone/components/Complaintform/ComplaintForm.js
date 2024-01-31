@@ -1,39 +1,50 @@
-import { useState } from 'react';
+// Import the necessary libraries
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from '../../assets/styles/ComplaintForm.module.css';
-import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 function ComplaintForm() {
   const [formData, setFormData] = useState({
+    subject: '', 
     description: '',
     photo_url: '',
     location: '',
-    department_name: '',
-    remarks: '',
+    department_id: '',
   });
-  
-  const router = useRouter();
+
+  const [departments, setDepartments] = useState([]); // State to store department data
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   const accessToken = localStorage.getItem('accessToken');
+  //   // Check if the access token is present
+  //   if (!accessToken) {
+  //     router.push('/user/userlogin'); // Redirect to the login page if not authenticated
+  //   }
+
+  //   // Fetch departments when the component mounts
+  //   fetchDepartments();
+  // }, [router]);
+  // Fetch departments from the API
+  const fetchDepartments = async () => {
+    try {
+      const response = await axios.get('/api/department/department'); 
+      setDepartments(response.data);
+    } catch (error) {
+      console.error('Error fetching departments', error);
+    }
+  };
+  fetchDepartments();
 
   // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
-
-  useEffect(() => {
-    const accessToken = localStorage.getItem('accessToken'); 
-    // Check if the access token is present
-    if (!accessToken) {
-      router.push('/user/userlogin'); // Redirect to the login page if not authenticated
-    }
-
-    // If you have additional checks or validation for the access token, add them here
-
-  }, [router]);
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -47,11 +58,11 @@ function ComplaintForm() {
       console.log(response.data);
       alert('Complaint submitted successfully!');
       setFormData({
+        subject: '', 
         description: '',
         photo_url: '',
         location: '',
-        department_name: '',
-        remarks: '',
+        department_id: '',
       });
     } catch (error) {
       console.error('There was an error submitting the form', error);
@@ -61,6 +72,18 @@ function ComplaintForm() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formControl}>
+        <label htmlFor="subject" className={styles.label}>Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          className={styles.input}
+          value={formData.subject}
+          onChange={handleChange}
+        />
+      </div>
+
       <div className={styles.formControl}>
         <label htmlFor="description" className={styles.label}>Description</label>
         <textarea
@@ -97,27 +120,21 @@ function ComplaintForm() {
       </div>
 
       <div className={styles.formControl}>
-        <label htmlFor="department_name" className={styles.label}>Department Name</label>
-        <input
-          type="text"
-          id="department_name"
-          name="department_name"
-          className={styles.input}
-          value={formData.department_name}
+        <label htmlFor="department_id" className={styles.label}>Department</label>
+        <select
+          id="department_id"
+          name="department_id"
+          className={styles.select}
+          value={formData.department_id}
           onChange={handleChange}
-        />
-      </div>
-
-      <div className={styles.formControl}>
-        <label htmlFor="remarks" className={styles.label}>Remarks</label>
-        <input
-          type="text"
-          id="remarks"
-          name="remarks"
-          className={styles.input}
-          value={formData.remarks}
-          onChange={handleChange}
-        />
+        >
+          <option value="">Select Department</option>
+          {departments.map((department) => (
+            <option key={department._id} value={department.department_id}>
+              {`${department.department_name} - ${department.department_id}`}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className={styles.formControl}>
